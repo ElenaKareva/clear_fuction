@@ -1,24 +1,24 @@
-let healthIndicator = "";
+let healthIndicator = '';
 export const Warlock = {
-  name: "Чародей",
+  name: 'Чародей',
   health: 70,
 };
 export const Mage = {
-  name: "Маг",
+  name: 'Маг',
   health: 30,
 };
 export const Witch = {
-  name: "Ведьма",
+  name: 'Ведьма',
   health: 10,
 };
 
 export default function indicator(hero) {
   if (hero.health > 50) {
-    healthIndicator = " healthy";
+    healthIndicator = ' healthy';
   } else if ((hero.health <= 50) && (hero.health >= 15)) {
-    healthIndicator = " wounded";
+    healthIndicator = ' wounded';
   } else {
-    healthIndicator = " critical";
+    healthIndicator = ' critical';
   }
   return hero.name + healthIndicator;
 }
